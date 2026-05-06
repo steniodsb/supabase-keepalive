@@ -13,7 +13,7 @@ function resolveEnvPlaceholders(value) {
 }
 
 async function pingProject(project) {
-  const url = `${project.url}/rest/v1/?apikey=${encodeURIComponent(project.key)}`;
+  const url = `${project.url}/auth/v1/settings`;
   const res = await fetch(url, {
     method: "GET",
     headers: {

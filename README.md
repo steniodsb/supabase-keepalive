@@ -4,7 +4,7 @@ Mantém projetos Supabase do plano gratuito ativos, evitando a pausa automática
 
 ## Como funciona
 
-Um workflow do GitHub Actions roda 2x por semana (segunda e quinta às 12:00 UTC) e faz uma requisição `GET` no endpoint `/rest/v1/` de cada projeto listado em `projects.json`. Esse endpoint retorna o schema OpenAPI e funciona em qualquer projeto Supabase, sem depender de tabela específica.
+Um workflow do GitHub Actions roda 2x por semana (segunda e quinta às 12:00 UTC) e faz uma requisição `GET` no endpoint `/auth/v1/settings` de cada projeto listado em `projects.json`. Esse endpoint retorna as configurações de autenticação e funciona em qualquer projeto Supabase com a `anon` key, sem depender de tabela específica.
 
 Se algum projeto falhar, o workflow sai com erro e o GitHub envia notificação por e-mail.
 
