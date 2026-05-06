@@ -1,12 +1,7 @@
 [
   {
-    "name": "PROJETO1",
-    "url": "https://xxxxxxxxxxxxxxxxxxxx.supabase.co",
-    "key": "${SUPABASE_KEY_PROJETO1}"
-  },
-  {
-    "name": "PROJETO2",
-    "url": "https://yyyyyyyyyyyyyyyyyyyy.supabase.co",
-    "key": "${SUPABASE_KEY_PROJETO2}"
+    "name": "MARMITAS_SOLARIS",
+    "url": "https://ixcgauiwwopvzbifnyit.supabase.co",
+    "key": "${SUPABASE_KEY_MARMITAS_SOLARIS}"
   }
 ]

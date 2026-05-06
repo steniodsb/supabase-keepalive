@@ -18,8 +18,7 @@ jobs:
 
       - name: Ping Supabase projects
         env:
-          SUPABASE_KEY_PROJETO1: ${{ secrets.SUPABASE_KEY_PROJETO1 }}
-          SUPABASE_KEY_PROJETO2: ${{ secrets.SUPABASE_KEY_PROJETO2 }}
+          SUPABASE_KEY_MARMITAS_SOLARIS: ${{ secrets.SUPABASE_KEY_MARMITAS_SOLARIS }}
           # Adicione novos secrets aqui conforme projects.json crescer:
           # SUPABASE_KEY_NOVO_PROJETO: ${{ secrets.SUPABASE_KEY_NOVO_PROJETO }}
         run: node scripts/ping.js
