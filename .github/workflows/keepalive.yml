@@ -1,0 +1,25 @@
+name: Supabase Keep-Alive
+
+on:
+  schedule:
+    # Segunda e quinta às 12:00 UTC
+    - cron: "0 12 * * 1,4"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Ping Supabase projects
+        env:
+          SUPABASE_KEY_PROJETO1: ${{ secrets.SUPABASE_KEY_PROJETO1 }}
+          SUPABASE_KEY_PROJETO2: ${{ secrets.SUPABASE_KEY_PROJETO2 }}
+          # Adicione novos secrets aqui conforme projects.json crescer:
+          # SUPABASE_KEY_NOVO_PROJETO: ${{ secrets.SUPABASE_KEY_NOVO_PROJETO }}
+        run: node scripts/ping.js
