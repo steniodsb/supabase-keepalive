@@ -2,8 +2,8 @@ name: Supabase Keep-Alive
 
 on:
   schedule:
-    # Segunda e quinta às 12:00 UTC
-    - cron: "0 12 * * 1,4"
+    # A cada 2 dias às 12:00 UTC
+    - cron: "0 12 */2 * *"
   workflow_dispatch:
 
 jobs:
